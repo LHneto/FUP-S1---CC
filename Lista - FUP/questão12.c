@@ -1,21 +1,23 @@
 #include <stdio.h>
 
 int main() {
-    float salarioInicial;
+    float salario, salario_inicial, salario_com_aumento, salario_final;
+
+    printf("Digite o salário do funcionário: ");
+    scanf("%f", &salario);
 
     
-    printf("Digite o salário inicial do funcionário: R$ ");
-    scanf("%f", &salarioInicial);
+    salario_inicial = salario;
 
- 
-    salarioInicial *= 1.15; 
+    
+    salario_com_aumento = salario * 1.15;
 
-   
-    salarioInicial *= 0.92; 
+    
+    salario_final = salario_com_aumento * 0.92;
 
-    printf("Salário inicial: R$ %.2f\n", salarioInicial / 1.15);
-    printf("Salário com aumento de 15%%: R$ %.2f\n", salarioInicial);
-    printf("Salário final após desconto de 8%% de impostos: R$ %.2f\n", salarioInicial);
+    
+    printf("Salário inicial: R$ %.2f\n", salario_inicial);
+    printf("Salário com aumento: R$ %.2f\n", salario_com_aumento);
+    printf("Salário final após desconto de impostos: R$ %.2f\n", salario_final);
 
     return 0;
-}
