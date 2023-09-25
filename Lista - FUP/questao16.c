@@ -1,25 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    int quantidadeSanduiches;
-    int fatiasQueijo, fatiasPresunto;
+    
+    int peso_queijo = 50;       
+    int peso_presunto = 50;     
+    int peso_hamburguer = 100;  
+    int quantidade_sanduiches;
 
-    printf("Digite a quantidade de sanduíches a fazer: ");
-    scanf("%d", &quantidadeSanduiches);
+    printf("Informe a quantidade de sanduíches a fazer: ");
+    scanf("%d", &quantidade_sanduiches);
 
    
-    fatiasQueijo = 2 * quantidadeSanduiches; 
-    fatiasPresunto = quantidadeSanduiches; 
+    printf("Quantidade de queijo necessária: %.2lf kg\n", (2.0 * peso_queijo * quantidade_sanduiches) / 1000.0);
+    printf("Quantidade de presunto necessária: %.2lf kg\n", (peso_presunto * quantidade_sanduiches) / 1000.0);
+    printf("Quantidade de carne (hambúrguer) necessária: %.2lf kg\n", (peso_hamburguer * quantidade_sanduiches) / 1000.0);
 
-    int pesoQueijo = 100 * quantidadeSanduiches;
-    int pesoCarne = 100 * quantidadeSanduiches; 
-    int pesoPresunto = 50 * quantidadeSanduiches;
-    
-    
-    printf("Quantidade de queijo necessária: %d fatias\n", fatiasQueijo);
-    printf("Quantidade de presunto necessária: %d fatias\n", fatiasPresunto);
-    printf("Quantidade de carne (hambúrguer) necessária: %d gramas\n", pesoCarne);
-    printf("Quantidade de presunto necessária: %d gramas\n", pesoPresunto);
-    printf("Quantidade de queijo necessária: %d gramas\n", pesoQueijo);
     return 0;
 }
