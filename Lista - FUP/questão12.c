@@ -1,8 +1,10 @@
 #include <stdio.h>
 
+
 int main() {
     float salario, salario_inicial, salario_com_aumento, salario_final;
 
+    
     printf("Digite o salário do funcionário: ");
     scanf("%f", &salario);
 
@@ -21,3 +23,4 @@ int main() {
     printf("Salário final após desconto de impostos: R$ %.2f\n", salario_final);
 
     return 0;
+}
