@@ -14,3 +14,5 @@ int main() {
     printf("Você conseguiu abastecer %.2f litros de gasolina.\n", pagamento / precoLitro);
 
     return 0;
+
+}
