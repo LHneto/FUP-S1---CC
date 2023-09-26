@@ -8,7 +8,7 @@ int main() {
     scanf("%f", &raio);
 
     
-    area = 3.14159265358979323846 * raio * raio;
+    area = 3.14 * raio * raio;
 
     
     printf("A área da pizza com raio %.2f é %.2f\n", raio, area);
