@@ -89,7 +89,7 @@ void desenhaforca() {
 
 void escolhepalavra() {
     FILE *f;
-    f = fopen("palavras.txt", "r");
+    f = fopen("../palavras.txt", "r");
     if (f == NULL) {
         printf("Banco de dados de palavras não disponível. Certifique-se de que o arquivo 'palavras.txt' existe.\n\n");
         exit(1);
@@ -126,7 +126,7 @@ void adicionapalavra() {
         scanf("%s", novapalavra);
 
         FILE *f;
-        f = fopen("palavras.txt", "a+");
+        f = fopen("../palavras.txt", "a+");
         if (f == NULL) {
             printf("Erro ao abrir ou criar o banco de dados de palavras.\n\n");
             exit(1);
@@ -164,7 +164,7 @@ void salvarRanking(int pontuacao) {
     printf("Digite seu nome para o ranking: ");
     scanf("%s", nome);
 
-    FILE *ranking = fopen("ranking.txt", "a");
+    FILE *ranking = fopen("../ranking.txt", "a");
     if (ranking == NULL) {
         printf("Erro ao abrir ou criar o arquivo de ranking.\n");
         exit(1);
@@ -188,6 +188,7 @@ int main() {
 
     if (ganhou()) {
         printf("\nParabéns, você ganhou!\n\n");
+        printf("A palavra era **%s**\n\n", palavrasecreta);
         salvarRanking(chutesdados);
     } else {
         printf("\nPuxa, você foi enforcado!\n");
